@@ -10,7 +10,7 @@ vim v2ss/config.json
 vim nginx/server.conf
 ```
 ## 2.Replace Cert
-> 阿里云免费肾
+> 阿里云免费申请
 
 ## 3.Run
 
