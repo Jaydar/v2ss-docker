@@ -1,0 +1,11 @@
+FROM ghcr.io/shadowsocks/ssserver-rust:latest
+
+RUN mkdir /var/v2ss/
+
+COPY /v2ray-plugin /var/v2ss/v2ray-plugin
+COPY /server.key /var/v2ss/server.key
+COPY /server.pem /var/v2ss/server.pem
+COPY /config.json /etc/shadowsocks-rust/config.json
+
+RUN chmod +x /var/v2ss/v2ray-plugin
+

@@ -1,0 +1,55 @@
+version: '3'
+
+name: docker
+
+services:
+  nginx:
+    container_name: nginx
+    hostname: nginx
+    image: nginx:stable
+
+    ports:
+      - 80:80
+      - 443:443
+      - 80:80/udp
+      - 443:443/udp
+    volumes:
+      - ./nginx/server.com.conf:/etc/nginx/conf.d/server.com.conf
+      - ./nginx/server.key:/etc/nginx/server.key
+      - ./nginx/server.pem:/etc/nginx/server.pem
+    restart: always
+    networks:
+      - docker
+
+  v2ss:
+    container_name: v2ss
+    hostname: v2ss
+    build: 
+      context: ./v2ss
+    restart: always
+    expose:
+      - 9899/tcp
+      - 9899/udp
+    networks:
+      - docker
+
+
+  MinIO:
+    image: bitnami/minio:latest
+    container_name: MinIO
+    hostname: minio
+    expose:
+      - 9000
+      - 9001
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: 123123
+    restart: always
+    networks:
+      - docker
+
+
+networks:
+  docker:
+    driver: bridge
+    external: false
