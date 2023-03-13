@@ -25,14 +25,14 @@ docker-compose up -d --build
 proxies:
 - name: "ss-v2ray"
   type: ss
-  server: server.com
+  server: server.com #😐 改
   port: 443
   cipher: chacha20-ietf-poly1305
-  password: "123123"
+  password: "123123" #😐 改
   plugin: v2ray-plugin
   plugin-opts:
     mode: websocket
     tls: true
-    host: server.com
+    host: server.com #😐 改
     path: "/v2ss"
 ```
