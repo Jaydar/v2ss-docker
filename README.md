@@ -21,7 +21,7 @@ vim nginx/server.conf
 docker-compose up -d --build
 ```
 
-## 3. Clash Clinet
+## 4. Clash Clinet
 > password 和 host 与之前保持一致
 ```yaml
 proxies:
