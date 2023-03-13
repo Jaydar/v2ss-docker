@@ -1,7 +1,7 @@
 # v2ss-docker
 docker-compose 快速部署 shadowsocks v2ray-plugin nginx  <br>
 MinIO 只是用来伪装<br>
-VPS 可以去 aws google 白嫖
+VPS 可以去 aws google 白嫖 <br>
 Cloudflare 免费cdn 隐藏真实IP 可让服务更安全
 ## 1. Edit Config
 ```bash
