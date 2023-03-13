@@ -1,6 +1,6 @@
 # v2ss-docker
 docker-compose 快速部署 shadowsocks v2ray-plugin nginx  <br>
-MinIO 只是用来伪装成真实网站
+MinIO 只是用来伪装
 ## 1. Edit Config
 ```bash
 # 修改密码 password
